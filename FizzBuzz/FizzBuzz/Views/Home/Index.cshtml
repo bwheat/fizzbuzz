@@ -1,0 +1,17 @@
+﻿@model FizzBuzz.Models.FizzBuzzModel
+
+@{
+    ViewBag.Title = "FizzBuzz";
+}
+
+<h2>FizzBuzz</h2>
+
+
+<ol>
+
+    @foreach (var item in Model.Results)
+    {
+        <li>@item</li>
+    }
+
+</ol>

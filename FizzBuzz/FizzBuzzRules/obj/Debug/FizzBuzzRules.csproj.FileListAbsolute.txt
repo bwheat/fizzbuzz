@@ -1,0 +1,5 @@
+C:\Proj\FizzBuzz\FizzBuzzRules\bin\Debug\FizzBuzzRules.dll
+C:\Proj\FizzBuzz\FizzBuzzRules\bin\Debug\FizzBuzzRules.pdb
+C:\Proj\FizzBuzz\FizzBuzzRules\obj\Debug\FizzBuzzRules.csprojResolveAssemblyReference.cache
+C:\Proj\FizzBuzz\FizzBuzzRules\obj\Debug\FizzBuzzRules.dll
+C:\Proj\FizzBuzz\FizzBuzzRules\obj\Debug\FizzBuzzRules.pdb
