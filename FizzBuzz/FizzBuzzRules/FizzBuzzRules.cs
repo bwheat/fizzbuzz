@@ -27,6 +27,16 @@ namespace FizzBuzzRules
         }
     }
 
+    public class NotDivisibleBy3or5 : IFizzbuzzRule
+    {
+        public string DetermineFizzBuzz(int number)
+        {
+            if (number%3 != 0 && number%5 != 0)
+                return number.ToString();
+            return "";
+        }
+    }
+
 
     public class FizzBuzzRules
     {
@@ -36,6 +46,7 @@ namespace FizzBuzzRules
         {
             _rules.Add(new IsDivisibleBy3());
             _rules.Add(new IsDivisibleBy5());
+            _rules.Add(new NotDivisibleBy3or5());
         }
 
         public List<string> FindFizzBuzzList(int min, int max)
