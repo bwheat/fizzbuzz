@@ -6,12 +6,26 @@
 
 <h2>FizzBuzz</h2>
 
+@using (Html.BeginForm("Index", "Home",FormMethod.Post))
+{
+        @Html.ValidationMessage("Error");
+            
 
-<ol>
+        @Html.LabelFor(model => Model.Min)
+        @Html.TextBoxFor(model => Model.Min, new { @type ="number"})
+        <br />
+        @Html.LabelFor(i => Model.Max);
+        @Html.TextBoxFor(model => Model.Max, new { @type = "number" })
+        <br />
+        <input type="submit" value="submit" />
+}
 
-    @foreach (var item in Model.Results)
-    {
-        <li>@item</li>
-    }
-
-</ol>
+        @if (Model != null && Model.Results != null)
+{
+            <ol>
+                @foreach (var item in Model.Results)
+        {
+                    <li>@item</li>
+        }
+            </ol>
+}

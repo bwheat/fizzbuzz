@@ -12,17 +12,24 @@ namespace FizzBuzz.Controllers
     {
         //
         // GET: /Home/
+        private FizzBuzzRules.FizzBuzzRules _rules = new FizzBuzzRules.FizzBuzzRules();
 
         public ActionResult Index()
         {
-            var model = new FizzBuzzModel();
-            var rules = new FizzBuzzRules.FizzBuzzRules();
-            model.Max = 100;
-            model.Min = 1;
-            model.Results = rules.FindFizzBuzzList(model.Min, model.Max);
-            
-            return View(model);
+            return View();
         }
 
+        [HttpPost]
+        public ActionResult Index(FizzBuzzModel model)
+        {
+            if (model.Max < model.Min)
+            {
+                ModelState.AddModelError("Error","The max number must be greater than the min number");
+                return View("Index", model);
+            }
+
+            model.Results = _rules.FindFizzBuzzList(model.Min, model.Max);
+            return View("Index",model);
+        }
     }
 }

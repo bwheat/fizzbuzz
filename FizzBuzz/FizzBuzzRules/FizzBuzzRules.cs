@@ -52,7 +52,7 @@ namespace FizzBuzzRules
         public List<string> FindFizzBuzzList(int min, int max)
         {
             var results = new List<string>();
-            for (var i = min; i < max; i++)
+            for (var i = min; i <= max; i++)
             {
                 var result = "";
                 foreach (var rule in _rules)
